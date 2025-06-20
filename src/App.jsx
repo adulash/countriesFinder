@@ -16,7 +16,7 @@ function App() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-      <div className="font-inter dark:text-gray-100 min-h-screen w-screen bg-gray-100 dark:bg-gray-900 ">
+      <div className="font-inter dark:text-gray-100 min-h-screen w-full bg-gray-100 dark:bg-gray-900 ">
         <Header />
       </div>
     </BrowserRouter>
