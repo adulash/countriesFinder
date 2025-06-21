@@ -11,8 +11,7 @@ function Country() {
       {isError && <ShowMessage message="Something went wrong !!" />}
       {isLoading && <ShowMessage message="Loading countries... " />}
       {!isError && !isLoading && (
-        <div className="">
-          <h1>{country}</h1>
+        <div className="mx-auto w-full max-w-6xl px-5 md:px-0">
           <Link className="MB-16 inline-block rounded-md bg-white p-3 md:mb-20" to="/">
             <svg
               width="19"
@@ -31,7 +30,7 @@ function Country() {
               </g>
             </svg>
           </Link>
-          <div className="grid gap-11 lg:grid-cols-2 lg:gap-36">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-36">
             <img className="w-full" src={result?.flags?.svg} alt={result?.flags?.alt} />
             <div>
               <h1 className="mb-4 text-3xl font-extrabold lg:mb-7">{result?.name?.common}</h1>
