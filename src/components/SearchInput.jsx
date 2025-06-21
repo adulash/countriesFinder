@@ -1,8 +1,8 @@
-function SearchInput({ contriesList, filteredCountries }) {
+function SearchInput({ contriesList, filterCountriesList }) {
   const handleSearch = (e) => {
     e.preventDefault();
     const searchTerm = e.target.elements.search.value;
-    const filterdCountries =
+    const filteredCountries =
       !searchTerm || searchTerm === ""
         ? contriesList
         : contriesList.filter((country) =>
@@ -10,7 +10,7 @@ function SearchInput({ contriesList, filteredCountries }) {
               .toLowerCase()
               .includes(searchTerm.toLowerCase()),
           );
-    filteredCountries(filterdCountries);
+    filterCountriesList(filteredCountries);
   };
   return (
     <form className="relative flex-1" onSubmit={handleSearch}>

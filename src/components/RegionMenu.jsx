@@ -8,15 +8,17 @@ const options = [
   { value: "oceania", label: "Oceania" },
 ];
 
-function RegionMenu({ contriesList, filteredCountries }) {
+function RegionMenu({ contriesList, filterCountriesList }) {
   const handleFilterdContries = (e) => {
     const region = e.label;
-    const filterd =
+    console.log(region);
+
+    const filteredCountries =
       region === "all region"
         ? contriesList
         : contriesList.filter((contriy) => contriy.region === region);
 
-    filteredCountries(filterd);
+    filterCountriesList(filteredCountries);
   };
 
   return (
